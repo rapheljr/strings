@@ -1,3 +1,17 @@
+const countVowels = function(string) {
+    let count = 0;
+    for (let index = 0; index < string.length; index++) {
+        if (isVowel(string[index])) {
+            count++;
+        }
+    }
+    return count;
+}
+
+const isVowel = function(letter) {
+    return "aeiou".includes(letter.toLowerCase());
+}
+
 const testCountVowels = function(string, expectedCount, message) {
     let testResult = "✅";
     if (countVowels(string) !== expectedCount) {
@@ -40,4 +54,6 @@ const countVowelsTests = function() {
     // and more
 }
 
-countVowelsTests();
+// countVowelsTests();
+string = "1. countVowels - How many vowels in a given string?";
+console.log(countVowels(string));
